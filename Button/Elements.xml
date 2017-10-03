@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+     Id="TamTamSP2010BatchEditButton"
+     RegistrationId="0x01"
+     RegistrationType="ContentType"
+     Location="CommandUI.Ribbon"
+     Sequence="5"
+     Rights="EditListItems"
+     Title="Batch Edit">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.ListItem.Actions.Controls._children">
+          <Button
+            Id="Ribbon.ListItem.Actions.TTSP2010BatchEditButton"
+            Alt="Batch Edit"
+            Sequence="5"
+            Command="TT_BatchEdit_Button"
+            Image32by32="/_layouts/images/actionseditpage.png"
+            Image16by16="/_layouts/images/actionseditpage16.gif"
+            LabelText="Batch Edit"
+            TemplateAlias="o1" />
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.Documents.Manage.Controls._children">
+          <Button
+            Id="Ribbon.ListItem.Actions.TTSP2010BatchEditButton"
+            Alt="Batch Edit"
+            Sequence="5"
+            Command="TT_BatchEdit_Button"
+            Image32by32="/_layouts/images/actionseditpage.png"
+            Image16by16="/_layouts/images/actionseditpage16.gif"
+            LabelText="Batch Edit"
+            TemplateAlias="o1" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+          Command="TT_BatchEdit_Button"
+          CommandAction="javascript:function batchEdit() {
+                            TamTam.SP2010.BatchEdit.BatchEdit();                            
+                          }
+                          batchEdit();"
+          EnabledScript="javascript:function oneOrMoreEnable() { 
+                          var items = SP.ListOperation.Selection.getSelectedItems(); 
+                          var ci = CountDictionary(items); 
+                            return (ci > 1); 
+                          } 
+                          oneOrMoreEnable();" />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+  
+  <Control Id="AdditionalPageHead" Sequence="400" ControlSrc="~/_ControlTemplates/TamTam.SP2010.BatchEdit.ascx" />
+</Elements>

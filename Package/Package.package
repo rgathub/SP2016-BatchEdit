@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="548af472-6225-49e0-a8a8-442478bfe273" solutionId="548af472-6225-49e0-a8a8-442478bfe273" resetWebServer="false" sharePointProductVersion="16.0" name="SP2010.BatchEdit" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="5945363b-bccf-4ab1-be8f-15f95d03b335" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="168f0226-839f-407a-a3d5-6da2439d0259" />
+    <projectItemReference itemId="21480519-f755-443b-a293-f31c84c281a4" />
+    <projectItemReference itemId="b8404142-b5f8-4648-b0aa-dd68fac6d04d" />
+  </projectItems>
+</package>
