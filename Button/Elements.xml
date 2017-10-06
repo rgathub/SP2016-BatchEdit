@@ -40,15 +40,10 @@
                             TamTam.SP2010.BatchEdit.BatchEdit();                            
                           }
                           batchEdit();"
-          EnabledScript="javascript:function oneOrMoreEnable() { 
-                          var items = SP.ListOperation.Selection.getSelectedItems(); 
-                          var ci = CountDictionary(items); 
-                            return (ci > 1); 
-                          } 
-                          oneOrMoreEnable();" />
+                          />
       </CommandUIHandlers>
     </CommandUIExtension>
   </CustomAction>
   
-  <Control Id="AdditionalPageHead" Sequence="400" ControlSrc="~/_ControlTemplates/TamTam.SP2010.BatchEdit.ascx" />
+  <Control Id="AdditionalPageHead" Sequence="400" ControlSrc="~/_ControlTemplates/15/TamTam.SP2010.BatchEdit.ascx" />
 </Elements>

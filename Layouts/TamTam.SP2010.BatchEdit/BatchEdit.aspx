@@ -13,7 +13,8 @@
 <asp:content id="PageHead" contentplaceholderid="PlaceHolderAdditionalPageHead" runat="server">
 <script type="text/javascript">
     function BtnBatchEditCancel_Click() {
-        SP.UI.ModalDialog.commonModalDialogClose(SP.UI.DialogResult.cancel, 'Operation Cancelled, no values saved.');
+        //SP.UI.ModalDialog.commonModalDialogClose(SP.UI.DialogResult.cancel, 'Operation Cancelled, no values saved.');
+        window.frameElement.commonModalDialogClose(0, 'Operation Cancelled, no values saved.');
     } 
 </script>
 </asp:content>

@@ -2,6 +2,13 @@
 
 TamTam.SP2010.BatchEdit.BatchEdit = function () {
     var items = SP.ListOperation.Selection.getSelectedItems();
+
+    if (!items || items.length < 1)
+    {
+        alert('Please select an item');
+        return;
+    }
+
     this.selectedItems = '';
     var k;
 
